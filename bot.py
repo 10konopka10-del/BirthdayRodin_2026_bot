@@ -44,7 +44,7 @@ async def dinner(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await query.edit_message_text(text=text, reply_markup=reply_markup)
 
 def main():
-    TOKEN = "8993150538:AAHV8zEp0zgDLRIrSpfu_veØ—wL3ze6ZVrA"
+    TOKEN = "8993150538:AAHV8zEpOzgDLRIrSpfu_ve0-wL3ze6ZVrA"
 
     app = Application.builder().token(TOKEN).build()
 
