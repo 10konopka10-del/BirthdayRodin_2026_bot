@@ -1,7 +1,7 @@
 from telegram import InlineKeyboardButton, InlineKeyboardMarkup, Update
 from telegram.ext import Application, CommandHandler, CallbackQueryHandler, ContextTypes
 
-DINNERS = 10
+DINNERS = 9
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     if "left" not in context.user_data:
@@ -9,7 +9,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
 
     left = context.user_data["left"]
 
-    keyboard = [[InlineKeyboardButton("🍽 Заказать ужин", callback_data="dinner")]]
+    keyboard = [[InlineKeyboardButton("🍽 Заказать минт", callback_data="dinner")]]
     reply_markup = InlineKeyboardMarkup(keyboard)
 
     await update.message.reply_text(
@@ -44,7 +44,7 @@ async def dinner(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await query.edit_message_text(text=text, reply_markup=reply_markup)
 
 def main():
-    TOKEN = "8993150538: AAHV8zEp0zgDLRIrSpfu_veØ—wL3ze6ZVrA"
+    TOKEN = "8993150538:AAHV8zEp0zgDLRIrSpfu_veØ—wL3ze6ZVrA"
 
     app = Application.builder().token(TOKEN).build()
 
